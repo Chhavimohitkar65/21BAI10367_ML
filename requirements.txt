@@ -1,0 +1,6 @@
+streamlit
+openai
+pymongo
+redis
+sentence-transformers
+scikit-learn
