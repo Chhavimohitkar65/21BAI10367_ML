@@ -99,6 +99,8 @@ To get started with Document Retrieval System, follow these steps:
 - **Authentication**: Add user authentication and personalized document retrieval.
 - **Scalability**: Optimize the system for larger document datasets and concurrent users.
 
+## Contributors
+- **recruitments@trademarkia.com**
 
 
 
