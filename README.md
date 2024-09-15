@@ -7,14 +7,42 @@ This project implements a **Document Retrieval System** that integrates GPT-3.5-
 ---
 
 ## Features
-
-- **Document Search**: Retrieves and ranks documents stored in MongoDB based on query similarity using embeddings and cosine similarity.
-- **Query Expansion**: GPT-3.5-turbo expands user queries to improve search accuracy.
-- **Re-ranking with TF-IDF**: Refines search results using cosine similarity combined with TF-IDF scores for improved ranking.
-- **Caching with Redis**: Caches search results to improve response time and reduce database load.
-- **News Scraping**: Automatically scrapes articles from sources like BBC, CNN, and NY Times, periodically updating the document database.
-- **Answer Generation**: Generates natural language answers from retrieved documents using GPT-3.5-turbo.
-
+**FastAPI Setup**
+A FastAPI server is implemented to handle API requests, with two endpoints:
+/health: Health check endpoint to verify if the API is running.
+/search: Searches for documents based on user query, applies GPT-3.5-turbo for query expansion, and generates an answer based on retrieved documents.
+2. **Document Storage in MongoDB**
+Documents and their corresponding embeddings are stored in MongoDB for efficient retrieval.
+3. **Redis Cache for Results**
+Redis is used to cache query results to improve performance for repeat queries. Cached results expire after one hour.
+4. **Query Expansion Using GPT-3.5**
+Queries are expanded and enhanced using OpenAI's GPT-3.5-turbo model to improve document retrieval accuracy.
+5. **Answer Generation Using GPT-3.5**
+Answers to user queries are generated using the context of the retrieved documents, leveraging GPT-3.5-turbo.
+6.**Document Similarity Search**
+Cosine similarity is calculated between the user's query embedding and the document embeddings stored in MongoDB. Results are ranked and returned based on similarity scores.
+7. **User Request Limiting**
+Each user is allowed a maximum of 5 search requests. After that, an HTTP 429 error ("Too Many Requests") is triggered to prevent abuse.
+8.**News Scraping**
+News articles from sources like BBC, CNN, and The New York Times are scraped using newspaper3k and stored in MongoDB. The content is also embedded for similarity searches.
+9. **Streamlit Frontend**
+A Streamlit interface allows users to:
+Input queries and search documents.
+View expanded queries and similarity scores.
+Scrape news articles.
+Check API health.
+10. **Background Thread for Scraping**
+News scraping is done automatically in the background as soon as the FastAPI server starts, ensuring up-to-date information.
+11. **Dockerization**
+The application is containerized using Docker, with the following features:
+Python 3.10-slim image for efficiency.
+All dependencies installed via requirements.txt.
+Ports exposed for Streamlit (8501).
+Easy deployment of both FastAPI and Streamlit in the same container.
+12. **Health Check Endpoint**
+A /health endpoint is available to check the status of the FastAPI service, ensuring the backend is operational.
+13. **Concurrent FastAPI and Streamlit**
+FastAPI and Streamlit run concurrently using threading, ensuring both services are accessible simultaneously within the Docker container.
 ---
 
 ## Architecture Diagram
