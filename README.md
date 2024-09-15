@@ -38,7 +38,7 @@ This project implements a **Document Retrieval System** that integrates GPT-3.5-
 - **newspaper3k**: For scraping news articles.
 - **BeautifulSoup**: For parsing and scraping HTML content from news websites.
 
-## Installation
+
 
 ### Prerequisites
 
@@ -62,7 +62,7 @@ To get started with Document Retrieval System, follow these steps:
     ```bash
    pip install -r requirements.txt
 
-# Usage and System Overview
+
 
 ## Usage
 
