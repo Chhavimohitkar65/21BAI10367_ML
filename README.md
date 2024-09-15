@@ -62,4 +62,44 @@ To get started with Document Retrieval System, follow these steps:
     ```bash
    pip install -r requirements.txt
 
+# Usage and System Overview
+
 ## Usage
+
+### 1. Search for Documents:
+- Input your query in the Streamlit app.
+- The system expands the query using GPT-3.5-turbo and fetches relevant documents from MongoDB.
+- Documents are ranked based on cosine similarity and TF-IDF scores.
+
+### 2. Scrape News Articles:
+- The web scraper fetches the latest news articles from various sources and stores them in the MongoDB database.
+- Click the "Scrape News" button in the UI to trigger the scraping process manually.
+
+### 3. Cached Results:
+- Search results are cached in Redis for quick access when the same query is made again within a set time frame.
+
+---
+
+## System Overview
+
+### Query Flow:
+
+1. **User Query**: The user inputs a query via the Streamlit UI.
+2. **Query Expansion**: GPT-3.5-turbo expands the query for more accurate results.
+3. **Document Retrieval**: The system retrieves documents from MongoDB and ranks them using embeddings and TF-IDF.
+4. **Re-ranking and Answer Generation**: Documents are re-ranked based on cosine similarity and TF-IDF scores, and an answer is generated using GPT-3.5-turbo.
+5. **Results Display**: Results are displayed in the UI, and the response is cached for subsequent queries.
+
+---
+
+## Future Enhancements
+
+- **PDF and Word Document Support**: Extend the system to support document formats like PDF and Word.
+- **Summarization**: Implement document summarization for quicker insights.
+- **Authentication**: Add user authentication and personalized document retrieval.
+- **Scalability**: Optimize the system for larger document datasets and concurrent users.
+
+
+
+
+
