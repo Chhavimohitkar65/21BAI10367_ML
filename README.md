@@ -1,4 +1,5 @@
-##QueryMorph
+
+## 🌟 QueryMorph
 
 ### Document Retrieval System with GPT-3.5-turbo
 
