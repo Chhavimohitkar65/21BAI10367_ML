@@ -7,8 +7,10 @@ This project implements a **Document Retrieval System** that integrates GPT-3.5-
 
 ![Simple Presentation in Pink Lilac Pastel Blobs Basic Style](https://github.com/user-attachments/assets/67faf02f-3e0a-4364-a5c7-87606c787e2b)
 ##MongoDB
-![image](https://github.com/user-attachments/assets/ca821475-84c7-46ff-9520-097015ea545e)
 
+![image](https://github.com/user-attachments/assets/ca821475-84c7-46ff-9520-097015ea545e)
+#user
+![image](https://github.com/user-attachments/assets/77dd103f-0ec7-4bb3-b755-620791832dff)
 ---
 
 ## 🌟 Key Features
