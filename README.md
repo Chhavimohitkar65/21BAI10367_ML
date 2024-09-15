@@ -150,4 +150,4 @@ This project implements a **Document Retrieval System** that integrates GPT-3.5-
 
 ## Contributors
 
-- [Your Name](mailto:recruitments@trademarkia.com)
+- recruitments@trademarkia.com
