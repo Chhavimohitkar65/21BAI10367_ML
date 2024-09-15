@@ -6,6 +6,8 @@
 This project implements a **Document Retrieval System** that integrates GPT-3.5-turbo for query expansion and answer generation. It fetches and ranks documents based on user queries, leveraging MongoDB for document storage, Redis for caching, and web scraping to keep documents updated. The system is designed to provide fast and accurate search results using a combination of modern NLP techniques.
 
 ![Simple Presentation in Pink Lilac Pastel Blobs Basic Style](https://github.com/user-attachments/assets/67faf02f-3e0a-4364-a5c7-87606c787e2b)
+##MongoDB
+![image](https://github.com/user-attachments/assets/ca821475-84c7-46ff-9520-097015ea545e)
 
 ---
 
