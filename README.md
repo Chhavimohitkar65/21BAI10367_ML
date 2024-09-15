@@ -1,4 +1,5 @@
-#**QueryMorph**
+##QueryMorph
+
 ### Document Retrieval System with GPT-3.5-turbo
 
 This project implements a **Document Retrieval System** that integrates GPT-3.5-turbo for query expansion and answer generation. It fetches and ranks documents based on user queries, leveraging MongoDB for document storage, Redis for caching, and web scraping to keep documents updated. The system is designed to provide fast and accurate search results using a combination of modern NLP techniques.
@@ -59,9 +60,8 @@ This project implements a **Document Retrieval System** that integrates GPT-3.5-
 - Both **FastAPI** and **Streamlit** run concurrently using **threading**, making the system accessible from a single Docker container.
 
 
-## Architecture Diagram
-
-![Architecture Diagram](./architecture_diagram.png)
+## Architecture Diagram And Demonstration video
+https://drive.google.com/drive/folders/1L7LG9xm2iWcN8gHYf3tqBO1brAo7lt32?usp=sharing
 
 ### System Components:
 
