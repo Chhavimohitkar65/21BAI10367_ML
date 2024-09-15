@@ -6,44 +6,57 @@ This project implements a **Document Retrieval System** that integrates GPT-3.5-
 
 ---
 
-## Features
-**FastAPI Setup**
-A FastAPI server is implemented to handle API requests, with two endpoints:
-/health: Health check endpoint to verify if the API is running.
-/search: Searches for documents based on user query, applies GPT-3.5-turbo for query expansion, and generates an answer based on retrieved documents.
-2. **Document Storage in MongoDB**
-Documents and their corresponding embeddings are stored in MongoDB for efficient retrieval.
-3. **Redis Cache for Results**
-Redis is used to cache query results to improve performance for repeat queries. Cached results expire after one hour.
-4. **Query Expansion Using GPT-3.5**
-Queries are expanded and enhanced using OpenAI's GPT-3.5-turbo model to improve document retrieval accuracy.
-5. **Answer Generation Using GPT-3.5**
-Answers to user queries are generated using the context of the retrieved documents, leveraging GPT-3.5-turbo.
-6.**Document Similarity Search**
-Cosine similarity is calculated between the user's query embedding and the document embeddings stored in MongoDB. Results are ranked and returned based on similarity scores.
-7. **User Request Limiting**
-Each user is allowed a maximum of 5 search requests. After that, an HTTP 429 error ("Too Many Requests") is triggered to prevent abuse.
-8.**News Scraping**
-News articles from sources like BBC, CNN, and The New York Times are scraped using newspaper3k and stored in MongoDB. The content is also embedded for similarity searches.
-9. **Streamlit Frontend**
-A Streamlit interface allows users to:
-Input queries and search documents.
-View expanded queries and similarity scores.
-Scrape news articles.
-Check API health.
-10. **Background Thread for Scraping**
-News scraping is done automatically in the background as soon as the FastAPI server starts, ensuring up-to-date information.
-11. **Dockerization**
-The application is containerized using Docker, with the following features:
-Python 3.10-slim image for efficiency.
-All dependencies installed via requirements.txt.
-Ports exposed for Streamlit (8501).
-Easy deployment of both FastAPI and Streamlit in the same container.
-12. **Health Check Endpoint**
-A /health endpoint is available to check the status of the FastAPI service, ensuring the backend is operational.
-13. **Concurrent FastAPI and Streamlit**
-FastAPI and Streamlit run concurrently using threading, ensuring both services are accessible simultaneously within the Docker container.
----
+## 🌟 Key Features
+
+### ⚡ FastAPI Setup
+- **Endpoints:**
+  - `/health`: Verify if the API is running.
+  - `/search`: Search for documents based on user queries, expands them using GPT-3.5-turbo, and generates context-based answers from the retrieved documents.
+
+### 📚 Document Storage in MongoDB
+- Efficiently stores documents and their embeddings in MongoDB for fast retrieval and ranked search results.
+
+### 🚀 Redis Cache for Performance
+- Caches query results using Redis to boost performance for repeated queries. Cache entries expire after one hour, ensuring fresh content.
+
+### 🧠 Query Expansion with GPT-3.5
+- Automatically expands user queries using OpenAI's **GPT-3.5-turbo** model, improving the accuracy of document retrieval.
+
+### ✨ Answer Generation with GPT-3.5
+- Provides human-like, context-aware answers based on retrieved documents using **GPT-3.5-turbo**, enhancing user interactions.
+
+### 🔍 Advanced Document Similarity Search
+- Calculates **cosine similarity** between the query embeddings and document embeddings stored in MongoDB, ranking the results based on similarity scores.
+
+### ⚠️ User Request Limiting
+- Each user can make up to **5 search requests**. After that, the system triggers an HTTP `429 - Too Many Requests` error to prevent abuse.
+
+### 📰 Automated News Scraping
+- News articles from **BBC**, **CNN**, and **The New York Times** are scraped using **newspaper3k** and stored in MongoDB for enhanced, real-time searchability.
+
+### 🌐 Streamlit Frontend
+- A user-friendly **Streamlit** interface allows users to:
+  - Input search queries.
+  - View expanded queries and similarity scores.
+  - Scrape news articles.
+  - Check API health.
+
+### 🔄 Background News Scraping
+- A background thread automatically scrapes news articles when the FastAPI server starts, keeping the document database updated.
+
+### 🐳 Dockerized for Easy Deployment
+- Fully containerized using **Docker** with:
+  - Python 3.10-slim base image for efficiency.
+  - All dependencies pre-installed via `requirements.txt`.
+  - Exposed ports for **Streamlit (8501)**.
+  - Runs both FastAPI and Streamlit concurrently in the same container for seamless service.
+
+### ✅ Health Check Endpoint
+- The `/health` endpoint ensures the FastAPI service is up and running, providing an operational check.
+
+### 🔄 Concurrent FastAPI & Streamlit Execution
+- Both **FastAPI** and **Streamlit** run concurrently using **threading**, making the system accessible from a single Docker container.
+
 
 ## Architecture Diagram
 
