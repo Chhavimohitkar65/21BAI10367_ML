@@ -112,7 +112,29 @@ https://drive.google.com/drive/folders/1L7LG9xm2iWcN8gHYf3tqBO1brAo7lt32?usp=sha
     ```bash
     pip install -r requirements.txt
     ```
+4. Set up your environment variables:
+    ```bash
+    OPENAI_API_KEY=your_openai_api_key
+    MONGO_URI=your_mongodb_uri
 
+    ```
+ 5. Start MongoDB and Redis services:
+    - Ensure MongoDB is running locally or on a remote server.
+    - Start Redis using the following command:
+    ```bash
+    redis-server
+    ```
+
+6. Run the FastAPI server
+    ```bash
+    uvicorn main:app --reload
+    ```
+    
+7. Run the Streamlit app
+    ```bash
+    streamlit run app.py
+
+    ```
 ---
 
 ## Usage
