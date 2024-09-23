@@ -1,5 +1,5 @@
 
-## 🌟 QueryMorph
+## 🌟 QueryMorphAi
 
 ### Document Retrieval System with GPT-3.5-turbo
 
@@ -13,7 +13,7 @@ This project implements a **Document Retrieval System** that integrates GPT-3.5-
 ![image](https://github.com/user-attachments/assets/77dd103f-0ec7-4bb3-b755-620791832dff)
 ---
 
-## 🌟 Key Features
+## 🌟 Key Features of QueryMorphAi
 
 ### ⚡ FastAPI Setup
 - **Endpoints:**
