@@ -176,6 +176,3 @@ https://drive.google.com/drive/folders/1L7LG9xm2iWcN8gHYf3tqBO1brAo7lt32?usp=sha
 
 ---
 
-## Contributors
-
-- recruitments@trademarkia.com
