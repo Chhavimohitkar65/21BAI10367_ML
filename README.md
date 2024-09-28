@@ -1,7 +1,7 @@
 
 ## 🌟 QueryMorphAi
 
-### Document Retrieval System with GPT-3.5-turbo
+### Document Retrieval System with GPT-3.5-turbo 
 
 This project implements a **Document Retrieval System** that integrates GPT-3.5-turbo for query expansion and answer generation. It fetches and ranks documents based on user queries, leveraging MongoDB for document storage, Redis for caching, and web scraping to keep documents updated. The system is designed to provide fast and accurate search results using a combination of modern NLP techniques.
 
